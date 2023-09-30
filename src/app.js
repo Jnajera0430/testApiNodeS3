@@ -11,13 +11,13 @@ app.use(cors({
     origin: "http://localhost:5173"
 }));
 
+app.use(express.static('images'))
 app.use(express.json());
 
 app.use(fileUpload({
     useTempFiles: true,
     tempFileDir: './uploads'
 }));
-
 
 
 //routes
